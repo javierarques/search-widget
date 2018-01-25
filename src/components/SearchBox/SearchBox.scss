@@ -1,0 +1,19 @@
+@import '../../styles/config';
+@import '../../styles/mixins';
+
+.SearchBox {
+}
+
+.SearchBox-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: rem(15px);
+}
+
+.SearchBox-input {
+  display: block;
+  width: 100%;
+  padding: $spacer-sm;
+  border: 1px solid #a9a9a9;
+  font-size: rem(15px);
+}

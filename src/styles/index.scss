@@ -32,8 +32,13 @@ body {
   font-size: $font-size-base;
   font-family: $font-family;
   font-weight: 400;
+  color: $body-color;
   text-align: left;
   background-color: $body-background;
+  background-image: url('../assets/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,6 +48,14 @@ img {
   max-width: 100%;
   vertical-align: middle;
   height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
 }
 
 .App {

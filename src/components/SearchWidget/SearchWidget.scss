@@ -1,0 +1,37 @@
+@import '../../styles/config';
+@import '../../styles/mixins';
+
+$search-widget-background: #f1c74c !default;
+$search-widget-max-width: $breakpoint-small !default;
+
+.SearchWidget {
+  max-width: $search-widget-max-width;
+  margin: $spacer;
+  padding: $spacer;
+
+  background: $search-widget-background;
+
+  @include from-small() {
+    margin: $spacer-xl auto;
+    margin-top: 160px;
+    padding: $spacer-lg;
+  }
+
+  @include from-medium() {
+    padding: $spacer-lg;
+  }
+}
+
+.SearchWidget-title {
+  font-size: rem(24px);
+  line-height: 1.2;
+  color: #111;
+
+  @include from-small() {
+    font-size: rem(28px);
+  }
+
+  @include from-medium() {
+    font-size: rem(32px);
+  }
+}
