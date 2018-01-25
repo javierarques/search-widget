@@ -16,4 +16,24 @@ describe('<SearchBox />', () => {
       'city, airport, station, region and district...'
     );
   });
+
+  it('saves on the state the searched term', () => {
+    const wrapper = shallow(<SearchBox />);
+
+    wrapper
+      .find('.SearchBox-input')
+      .simulate('change', { target: { value: '123' } });
+
+    expect(wrapper.state()).toEqual({ terms: '123' });
+  });
+
+  it('only allows type alphanumeric characters and spaces', () => {
+    const wrapper = shallow(<SearchBox />);
+
+    wrapper
+      .find('.SearchBox-input')
+      .simulate('change', { target: { value: '!1@2# 3$4%5' } });
+
+    expect(wrapper.state()).toEqual({ terms: '12 345' });
+  });
 });
